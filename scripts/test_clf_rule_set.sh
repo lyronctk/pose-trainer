@@ -1,10 +1,10 @@
 # Project constants
-PROJ_ROOT=/Users/lyronctk/Desktop/projects/trainer
+PROJ_ROOT=/home/lyronctk/trainer/
 REF_IM_DIR=${PROJ_ROOT}/data/ruleset_references
 
 # Run params
-IMAGE_PATH=${REF_IM_DIR}/ref_lockout.png
-ANNOTATION_PATH=${REF_IM_DIR}/ref_lockout_annotated.png
+IMAGE_PATH=${REF_IM_DIR}/ref_squat.png
+ANNOTATION_PATH=${REF_IM_DIR}/ref_squat_annotated.png
 VID_ID=1
 FRAME_ID=23
 OUT_CSV=${REF_IM_DIR}/predictions.csv
