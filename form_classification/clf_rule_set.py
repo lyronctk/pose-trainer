@@ -11,7 +11,7 @@ import cv2
 # BlazePose-specific utilities
 mp_pose = mp.solutions.pose
 mp_drawing = mp.solutions.drawing_utils 
-drawing_spec = mp_drawing.DrawingSpec(thickness=1, circle_radius=1)
+drawing_spec = mp_drawing.DrawingSpec(thickness=3, circle_radius=3)
 PL = mp_pose.PoseLandmark
 
 
