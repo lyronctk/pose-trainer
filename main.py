@@ -10,7 +10,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Trainer Inference')
     
     parser.add_argument('inputdata', metavar='IDIR', help='path to input data') 
-    parser.add_argument('-outputdir', metavar='ODIR', help='path for output data of detectron') 
+    parser.add_argument('-outputdir', metavar='ODIR', help='path for output data') 
     parser.add_argument('-m', '--model', metavar='ARCH', default='VP3D', choices=model_names, help='model selection: ' + ' | '.join(model_names) + ' (default: VP3D)')
     args = parser.parse_args()
     return args
@@ -30,6 +30,7 @@ def run_PE(inputdata, outputdir, model):
         os.system("cd pose_estimation/video_pose_3d/data")
         os.system("python prepare_data_2d_custom.py -i {} -o myvideos".format(outputdir))
         os.system("python run.py -d custom -k myvideos -arc 3,3,3,3,3 -c checkpoint --evaluate pretrained_h36m_detectron_coco.bin --render --viz-subject input_video.mp4 --viz-action custom --viz-camera 0 --viz-video /path/to/input_video.mp4 --viz-output output.mp4 --viz-size 6".format(outputdir))
+       
 def main(args):
     model = run_PE(args.inputdata, args.m)
 
