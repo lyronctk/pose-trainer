@@ -14,8 +14,8 @@ def vid2frames(videopath, outputpath):
       count += 1
 
 def main():
-    rootdir = '/home/amolsingh/gcloud/data/videos/'
-    outdir = '/home/amolsingh/gcloud/data/frames/'
+    rootdir = '/home/amolsingh/gcloud/trainer/data/videos/'
+    outdir = '/home/amolsingh/gcloud/trainer/data/frames/'
     for subdir, dirs, files in os.walk(rootdir):
         for file in files:
             error = os.path.split(subdir)[1]
