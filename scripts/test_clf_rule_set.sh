@@ -11,7 +11,6 @@ OUT_CSV=${REF_IM_DIR}/predictions.csv
 
 # CMD
 python $PROJ_ROOT/form_classification/clf_rule_set.py --image-path $IMAGE_PATH \
-                                                      --out-csv $OUT_CSV \
                                                       --annotation-save-path $ANNOTATION_PATH \
                                                       --vid-id $VID_ID \
                                                       --frame-id $FRAME_ID
